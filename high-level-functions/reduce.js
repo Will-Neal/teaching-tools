@@ -14,6 +14,14 @@ const itemAverage = itemPrices.reduce((total, itemPrice, itemIndex, itemArray) =
         return total
     }
 });
+const mostExpensive = itemPrices.reduce((bigMoney, itemPrice) => {
+    if (itemPrice < bigMoney) {
+        return bigMoney
+    } else {
+        bigMoney = itemPrice
+        return bigMoney
+    }
+})
 
 
-console.log(itemAverage)
+console.log(mostExpensive)
