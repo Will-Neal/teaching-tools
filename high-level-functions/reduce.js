@@ -146,7 +146,6 @@ const recipeData = [
 ]
 
 const getTopping = recipeData.reduce((toppingArray, recipe) => {   
-    //console.log(recipe.topping)
     recipe.topping.forEach(topping => {
         toppingArray.push(topping.type)
     })
