@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PageA from './pages/PageA';
 import PageB from './pages/PageB'
+import Single from './pages/Single'
 
+import { testdata } from './testdata'
 
 function App() {
 
@@ -13,9 +15,13 @@ function App() {
     <Router>
       <div className='App'>
         <Routes>
-        <Route 
+          <Route 
             path="/pagea"
-            element={<PageA/>}
+            element={<PageA testdata={testdata}/>}
+          />
+          <Route 
+            path="/pagea/:id"
+            element={<Single testdata={testdata}/>}
           />
           <Route 
             path="/pageb"
