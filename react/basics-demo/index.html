@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Hello React!</title>
+
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel"> //babel is a JavaScript compiler that lets us use es6 in old browsers
+        
+        //Defining a React component class => React.Component is the basic component object being extended by customized components. You must define the method "render(), other component methods are optional"
+        class App extends React.Component {
+            render() {
+                return <h1>Hello World</h1>
+            }
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root')) // ReactDOM is an object containing DOM specific methods, including a render method that takes in a component (a specialized type of object) and a parent element accessed through DOM manipulation.
+    </script>
+</body>
+
+</html>
